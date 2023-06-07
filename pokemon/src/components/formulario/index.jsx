@@ -1,4 +1,4 @@
-import CampoTexto from '../campo-texto';
+import CampoInput from '../campo-imput';
 import ListaSuspensa from '../listaSuspensa';
 import Botao from '../botao';
 import './formulario.css';
@@ -28,20 +28,22 @@ const Formulario = ({aoPokemonCadastrado,categorias}) => {
     return (
         <section className='formulario'>
             <form onSubmit={() => aoSalvar(event)}>
-                <CampoTexto
+                <CampoInput
                     label="Nome"
                     obrigatorio={true}
                     placeholder="Digite o nome"
                     valor={nome}
+                    restricao={50}
                     aoAlterado={valor => setNome(valor)}
                 />
-                <CampoTexto label="Nivel"
+                <CampoInput label="Nivel"
                     obrigatorio={true}
                     placeholder="Digite o nivel atual"
                     valor={nivel}
+                    restricao={3}
                     aoAlterado={valor => setNivel(valor)}
                 />
-                <CampoTexto label="Imagem"
+                <CampoInput label="Imagem"
                     obrigatorio={true}
                     placeholder="Digite o caminho da imagem"
                     valor={imagem}

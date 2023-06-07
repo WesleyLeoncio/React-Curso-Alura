@@ -3,29 +3,30 @@ import './App.css'
 import Banner from '../components/banner'
 import Formulario from '../components/formulario'
 import Categoria from '../components/categoria';
+import Footer from '../components/Footer';
 
 function App() {
 
   const categorias = [
     {
-        nome: 'Fogo',
-        corPrimaria: '#57C278',
-        corSecundaria: '#D9F7E9',
+        nome: 'Fire',
+        corPrimaria: '#C92727',
+        corSecundaria: '#FF746E',
     },
     {
-        nome: 'Gelo',
-        corPrimaria: '#82CFFA',
-        corSecundaria: '#E8F8FF',
+        nome: 'Water',
+        corPrimaria: '#047FFF',
+        corSecundaria: '#7ED9F1',
     },
     {
-        nome: 'Terra',
-        corPrimaria: '#A6D157',
-        corSecundaria: '#F0F8E2',
+        nome: 'Grass',
+        corPrimaria: '#31D52D',
+        corSecundaria: '#A4FFA1',
     },
     {
-        nome: 'Elétrico',
-        corPrimaria: '#E06B69',
-        corSecundaria: '#FDE7E8',
+        nome: 'Electric',
+        corPrimaria: '#f1ec01',
+        corSecundaria: '#FBFF68',
     },
  
 ]
@@ -47,6 +48,7 @@ function App() {
         corSecundaria={categoria.corSecundaria}
         pokemonsT={pokemons.filter(pokemon => pokemon.categoria === categoria.nome)}
       />)}
+      <Footer/>
     </>
   )
 }
